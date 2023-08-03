@@ -4,14 +4,18 @@
 // ⛔️ Recuerda que debes utilizar el objeto global "Math".
 
 function elevarAlCuadrado(num) {
-   // Retorna el valor de "num" elevado al cuadrado.
-   // Tu código:
+   return num;
 }
 
+Math.pow(2,2)
+
 function elevarAlCubo(num) {
-   // Retorna el valor de "num" elevado al cubo.
-   // Tu código:
+   return num;
 }
+
+Math.pow(3,3)
+
+elevarAlCubo()
 
 function elevar(num, exponent) {
    // Retorna el valor de "num" elevado al exponente "exponent".

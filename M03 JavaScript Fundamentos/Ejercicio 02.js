@@ -9,28 +9,23 @@ function devolverString(string) {
 // ⛔️ "X" e "Y" son números.
 
 function suma(x, y){
-   var sumar = x + y;
-   return sumar;
+   return x +y;
 }
 
 function resta(x, y){
-   var restar = x - y;
-   return restar;
+   return x - y;
 }
 
 function divide(x, y){
-   var dividir = x / y;
-   return dividir;
+   return x / y;
 }
 
 function multiplica(x, y){
-   var multiplicar = x * y;
-   return multiplicar;
+   return x * y;
 }
 
 function obtenerResto(x, y){
-   var resto = x % y;
-   return resto;
+   return x % y;
 }
 
 suma(4,5);

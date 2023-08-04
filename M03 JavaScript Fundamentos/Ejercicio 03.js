@@ -2,7 +2,10 @@
 /*3️⃣ EJERCICIO 03 3️⃣*/
 
 function sonIguales(x, y) {
-   if(x == y){
+   // Retorna true si "x" e "y" son iguales.
+   // De lo contrario, retorna false.
+   // Tu codigo:
+   if(x === y){
       return true;
    } else {
       return false;
@@ -10,11 +13,21 @@ function sonIguales(x, y) {
 }
 
 function tienenMismaLongitud(str1, str2) {
-   return str1.length == str2.length;
+   // Retorna true si los dos strings tienen la misma longitud
+   // De lo contrario, retorna false.
+   // Tu codigo:
+   if(str1.length === str2.length){
+      return true;
+   } else {
+      return false;
+   }
 }
 
 
 function menosQueNoventa(num) {
+   // Retorna true si el argumento "num" es menor que noventa.
+   // De lo contrario, retorna false.
+   // Tu codigo:
    if(num < 90){
       return true;
    } else {
@@ -23,8 +36,10 @@ function menosQueNoventa(num) {
 }
 
 
-
 function mayorQueCincuenta(num) {
+   // Retorna true si el argumento "num" es mayor que cincuenta.
+   // De lo contrario, retorna false.
+   // Tu codigo:
    if(num > 50){
       return true;
    } else {
@@ -34,6 +49,9 @@ function mayorQueCincuenta(num) {
 
 
 function esPar(num) {
+   // Retorna true si "num" es par.
+   // De lo contrario, retorna false.
+   // Tu codigo:
    if(num % 2 === 0){
       return true;
    } else {
@@ -43,7 +61,10 @@ function esPar(num) {
 
 
 function esImpar(num) {
-   if(num % 2 != 0){
+   // Retorna true si "num" es impar.
+   // De lo contrario, retorna false.
+   // Tu codigo:
+   if(num % 2 !== 0){
       return true;
    } else {
       return false;

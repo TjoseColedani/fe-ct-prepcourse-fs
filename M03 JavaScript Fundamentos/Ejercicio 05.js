@@ -22,24 +22,22 @@ function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
-   var nuevoStr = str + '!';
-   return nuevoStr;
+   return str + '!';
 }
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
-   var nombreCompleto = nombre + " " + apellido;
-   return nombreCompleto;
+   return nombre + " " + apellido;
 }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
-   var saludo = 'Hola ' + nombre + '!';
-   return saludo;
+   return 'Hola ' + nombre + '!';
+   
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -79,12 +77,7 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   if(letra.length !== 1){
-      return 'Dato incorrecto'
-   }
-
-   var vocal = letra.toLowerCase();
-   if (vocal === "a" || vocal === "e" || vocal === "i" || vocal === "o" || vocal === "u"){
+   if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
       return 'Es vocal';
    } else {
       return 'Dato incorrecto';

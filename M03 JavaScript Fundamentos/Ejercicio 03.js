@@ -3,63 +3,53 @@
 
 function sonIguales(x, y) {
    if(x == y){
-      return 'X es igual a Y'
+      return true;
    } else {
-      'X no es igual a Y'
+      return false;
    }
 }
 
-sonIguales(2,2);
-
-
 function tienenMismaLongitud(str1, str2) {
-   str1.length === str2.length;
+   return str1.length == str2.length;
 }
 
-tienenMismaLongitud(str1,str2)
 
 function menosQueNoventa(num) {
    if(num < 90){
-      return True;
+      return true;
    } else {
-      return False;
+      return false;
    }
 }
 
-menosQueNoventa(89);
 
 
 function mayorQueCincuenta(num) {
    if(num > 50){
-      return True;
+      return true;
    } else {
-      return False;
+      return false;
    }
 }
-
-mayorQueCincuenta(125);
 
 
 function esPar(num) {
-   if(num%2===0){
-      return True;
+   if(num % 2 === 0){
+      return true;
    } else {
-      return False;
+      return false;
    }
 }
-
-esPar(3);
 
 
 function esImpar(num) {
-   if(num%2!=0){
-      return True;
+   if(num % 2 != 0){
+      return true;
    } else {
-      return False;
+      return false;
    }
 }
 
-esImpar(9);
 
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

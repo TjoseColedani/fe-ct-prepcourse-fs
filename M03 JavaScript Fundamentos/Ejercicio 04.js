@@ -4,36 +4,36 @@
 // ⛔️ Recuerda que debes utilizar el objeto global "Math".
 
 function elevarAlCuadrado(num) {
-   Math.pow(num,2);
-   return num;
+   var resultado = Math.pow(num,2);
+   return resultado;
 }
 
 
 function elevarAlCubo(num) {
-   Math.pow(num,2);
-   return num;
+   var resultado = Math.pow(num,3);
+   return resultado;
 }
 
 
 function elevar(num, exponent) {
    // Retorna el valor de "num" elevado al exponente "exponent".
    // Tu código:
-   Math.pow(num,exponent);
-   return num;
+   var resultado = Math.pow(num,exponent);
+   return resultado;
 }
 
 function redondearNumero(num) {
    // Redondea "num" al entero más próximo y retórnalo.
    // Tu código:
-   Math.round(num);
-   return num;
+   var resultado = Math.round(num);
+   return resultado;
 }
 
 function redondearHaciaArriba(num) {
    // Redondea "num" hacia arriba y retórnalo.
    // Tu código:
-   Math.ceil(num);
-   return num;
+   var resultado = Math.ceil(num);
+   return resultado;
 }
 
 function numeroRandom() {

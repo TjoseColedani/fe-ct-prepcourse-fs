@@ -51,7 +51,7 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
-   var frase =  '';
+   var frase = '';
    for(var i = 0; i < palabras.length; i++){
    frase += palabras[i];
    if(i !== palabras.length - 1){
@@ -60,6 +60,8 @@ function dePalabrasAFrase(palabras) {
    }
    return frase;
 }
+
+   //tambien se puede usar return palabras.join(' ')
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
@@ -73,17 +75,18 @@ function arrayContiene(array, elemento) {
    return false;
 }
 
+   //tambien se puede usar el return array.includes(elemento)
+
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
-   var sumaTotal = arrayOfNums.reduce(function(acumulador,elemento){
-      return acumulador + elemento;
-   },0)
-   return sumaTotal;
+   return arrayOfNums.reduce(function(suma, elemento){
+      return suma + elemento;
+   })
 }
 
-function promedioResultadosTest(resultadosTest) {
+function promedioResultadosTest(resultadosTest) {   
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
@@ -95,12 +98,21 @@ function promedioResultadosTest(resultadosTest) {
    return promedio;
 }
 
+   //podemos "reciclar" codigo y hacer 
+   //return agregarNumeros(resultadosTest) / resultadosTest.length
+
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   return Math.max(...arrayOfNums);
+   for(var i = 0; i < arrayOfNums.length; i++){
+      if(arrayOfNums[i] > arrayOfNums[i + 1]){
+         return arrayOfNums[i];
+      }
+   }
 }
+
+   //o mas avanzado return Math.max(...arrayOfNums);
 
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
@@ -108,7 +120,6 @@ function multiplicarArgumentos() {
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
    if(arguments.length === 0) return 0;
-   if(arguments.length === 1) return arguments[0];
    var producto = 1;
    for (var i = 0; i < arguments.length; i++){
       producto *= arguments[i];
@@ -149,14 +160,18 @@ function empiezaConNueve(num) {
    }
 }
 
+   //usar tambien num.charAT(0)
+   //if(num.charAt(0) === '9') return true;
+   // else return false;
+
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
-   for (var i = 1; i < array.length; i++){
-      if(array[i] !== array[0]) return false;
-      else return true;
+   for (var i = 0; i < array.length; i++){
+      if(array[i] === array[i + 1]) return true;
    }
+   return false;
 }
 
 function mesesDelAño(array) {
@@ -199,6 +214,10 @@ function mayorACien(array) {
    return resultado;
 }
 
+   //tambien se puede usar filter
+   // var resultado = resultado.filter(elemento => elemento > 100)
+   // return resultado;
+
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
@@ -210,15 +229,16 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-   var resultado = [];
-   for(var i = 0; i < 10; i++){
-      num += 2;
-      resultado.push(num);
-      if(num === i){
-         return "Se interrumpió la ejecución";
-      }
+   var array = [];
+   var iterador = [];
+   while(iterador < 10){
+      num = num + 2;
+      if(num === iterador) break;
+      array.push(num)
+      iterador++;
    }
-   return resultado;
+   if(iterador < 10) return "Se interrumpió la ejecución"
+   return array;
 }
 
 function continueStatement(num) {

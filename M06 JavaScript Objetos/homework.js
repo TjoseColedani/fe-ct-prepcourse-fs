@@ -55,6 +55,10 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    return objetoMisterioso.numeroMisterioso * 5;
 }
 
+   //con notacion de punto seria asi:
+   // var resultado = objetoMisterioso['numeroMisterioso'] * 5
+   // return resultado;
+
 function eliminarPropiedad(objeto, propiedad) {
    // El parámetro "propiedad" es una propiedad del objeto que recibes.
    // Debes eliminarla del objeto y retornarlo finalmente.
@@ -67,34 +71,37 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if(objetoUsuario.email){
-      return true;
-   } else {
-      return false;
-   }
+   if(objetoUsuario.email) return true;
+   else return false;
 }
+
+   //o puede hacerse asi
+   // return objetoUsuario.hasOwnProperty('email')
+   // aunque aca no nos seria muy util xq necesitamos que nos diga
+   // true o false y el hasOwnProperty solo dira si es true.
 
 function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if(objeto[propiedad]){
-      return true;
-   } else {
-      return false;
-   }
+   if(objeto[propiedad]) return true;
+   else return false;
 }
+
+   //o puede hacerse asi
+   // return objeto.hasOwnProperty(propiedad)
 
 function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-   if(objetoUsuario.password === password){
-      return true;
-   } else {
-      return false;
-   }
+   if(objetoUsuario.password === password) return true;
+   else return false;
 }
+
+   // o asi tambien:
+   // if(objetoUsuario[password] === password) return true
+   // else return false;
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
    // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
@@ -157,6 +164,13 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    }
    return objetoProducto;
 }
+
+   // o
+   // objetoProducto.calcularPrecioDescuento = function (){
+   // return this.precio - (this.precio * this.porcentajeDeDescuento)   
+   // }
+   //
+   // return objetoProducto;
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

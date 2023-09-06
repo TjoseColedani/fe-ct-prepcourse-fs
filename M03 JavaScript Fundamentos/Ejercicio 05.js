@@ -67,8 +67,7 @@ function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
-   var tasaCambio = 1.20;
-   var dolares = euro * tasaCambio;
+   var dolares = euro * 1.20;
    return dolares;
 }
 

@@ -75,7 +75,7 @@ function tieneEmail(objetoUsuario) {
    else return false;
 }
 
-   //o puede hacerse asi
+   // o puede hacerse asi
    // return objetoUsuario.hasOwnProperty('email')
    // aunque aca no nos seria muy util xq necesitamos que nos diga
    // true o false y el hasOwnProperty solo dira si es true.
